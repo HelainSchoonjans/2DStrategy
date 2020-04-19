@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9167597351054348396}
   - component: {fileID: 9167597351054348399}
   - component: {fileID: 114336523350601930}
+  - component: {fileID: 61875334241733046}
   m_Layer: 0
   m_Name: Tile_0
   m_TagString: Untagged
@@ -103,3 +104,33 @@ MonoBehaviour:
   - {fileID: 21300014, guid: 782ea11b0f62ca14f8ca2926bccac1a2, type: 3}
   - {fileID: 21300016, guid: 782ea11b0f62ca14f8ca2926bccac1a2, type: 3}
   - {fileID: 21300018, guid: 782ea11b0f62ca14f8ca2926bccac1a2, type: 3}
+  hoverAmount: 0.1
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!61 &61875334241733046
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167597351054348398}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.33, y: 3.57}
+    newSize: {x: 3.33, y: 3.57}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.33, y: 3.57}
+  m_EdgeRadius: 0
