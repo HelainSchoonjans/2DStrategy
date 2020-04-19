@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    private SpriteRenderer renderer;
+    private SpriteRenderer rend;
     public Sprite[] tileGraphics;
 
     public float hoverAmount;
 
     public LayerMask obstacleLayer;
 
+    public Color highlightedColor;
+    public bool isWalkable;
+    GameMaster gameMaster;
+
     private void Start()
     {
-        renderer = GetComponent<SpriteRenderer>();
+        rend = GetComponent<SpriteRenderer>();
         int randomTile = Random.Range(0, tileGraphics.Length);
-        renderer.sprite = tileGraphics[randomTile];
+        rend.sprite = tileGraphics[randomTile];
+
+        gameMaster = FindObjectOfType<GameMaster>();
     }
 
     private void OnMouseEnter()
@@ -28,15 +34,33 @@ public class Tile : MonoBehaviour
         transform.localScale -= Vector3.one * hoverAmount;
     }
 
+    public void OnMouseDown()
+    {
+        Debug.Log("Clicking on tile");
+    }
+
     public bool IsClear()
     {
-        Collider2D obstacle = Physics2D.OverlapCircle(transform.position, 0.2f, obstacleLayer);
-        if( obstacle != null)
+        Debug.Log("Is clear");
+        Collider2D col = Physics2D.OverlapCircle(transform.position, 0.2f, obstacleLayer);
+        if(col != null)
         {
             return false;
         } else
         {
             return true;
         }
+    }
+
+    public void Highlight()
+    {
+        rend.color = highlightedColor;
+        isWalkable = true;
+    }
+
+    public void Reset()
+    {
+        rend.color = Color.white;
+        isWalkable = false;
     }
 }

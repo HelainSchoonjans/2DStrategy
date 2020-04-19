@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9167597351054348398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,6 +108,8 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
+  highlightedColor: {r: 0.19063722, g: 0.28132284, b: 0.7924528, a: 0}
+  isWalkable: 0
 --- !u!61 &61875334241733046
 BoxCollider2D:
   m_ObjectHideFlags: 0
