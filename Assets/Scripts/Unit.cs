@@ -9,11 +9,22 @@ public class Unit : MonoBehaviour
 
     public int tileSpeed;
     public bool hasMoved;
+    public float hoverAmount;
 
     private void Start()
     {
         Debug.Log("Initializing unit");
         gameMaster = FindObjectOfType<GameMaster>();
+    }
+
+    private void OnMouseEnter()
+    {
+        transform.localScale += Vector3.one * hoverAmount;
+    }
+
+    private void OnMouseExit()
+    {
+        transform.localScale -= Vector3.one * hoverAmount;
     }
 
     public void OnMouseDown()
