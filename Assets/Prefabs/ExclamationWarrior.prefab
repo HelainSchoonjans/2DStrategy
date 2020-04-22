@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2623611733359001300}
   - component: {fileID: 2623611733359001301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2623611733373517508}
   - component: {fileID: 2623611733373517515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 2623611733571340778}
   - component: {fileID: 114913452135253396}
   - component: {fileID: 61050105358091134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ExclamationWarrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2623611734362326221}
   - component: {fileID: 2623611734362326220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2623611734754487052}
   - component: {fileID: 2623611734754487059}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2623611735145566372}
   - component: {fileID: 2623611735145566379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2623611735161750835}
   - component: {fileID: 2623611735161750834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
