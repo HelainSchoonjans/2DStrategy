@@ -41,7 +41,6 @@ public class Tile : MonoBehaviour
 
     public bool IsClear()
     {
-        Debug.Log("Is clear");
         Collider2D col = Physics2D.OverlapCircle(transform.position, 0.2f, obstacleLayer);
         if(col != null)
         {

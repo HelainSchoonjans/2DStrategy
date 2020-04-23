@@ -107,7 +107,7 @@ MonoBehaviour:
   hoverAmount: 0.1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   highlightedColor: {r: 0.19063722, g: 0.28132284, b: 0.7924528, a: 0}
   isWalkable: 0
 --- !u!61 &61875334241733046
@@ -134,5 +134,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.33, y: 3.57}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0

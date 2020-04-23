@@ -29,7 +29,6 @@ public class Unit : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("Clicking on Warrior");
         if( isSelected == true )
         {
             isSelected = false;
@@ -56,9 +55,10 @@ public class Unit : MonoBehaviour
 
         foreach (Tile tile in FindObjectsOfType<Tile>())
         {
-            if(Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed)
+            if((Mathf.Abs(transform.position.x - tile.transform.position.x) + 
+                Mathf.Abs(transform.position.y - tile.transform.position.y)) <= tileSpeed)
             {
-                if(tile.IsClear())
+                if(tile.IsClear() == true)
                 {
                     tile.Highlight();
                 }
