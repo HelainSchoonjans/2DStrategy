@@ -13,7 +13,6 @@ public class Unit : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Initializing unit");
         gameMaster = FindObjectOfType<GameMaster>();
     }
 
@@ -53,11 +52,19 @@ public class Unit : MonoBehaviour
             return;
         }
 
+        Tile[] tiles = FindObjectsOfType<Tile>();
+        Debug.Log("Number of tiles:");
+        Debug.Log(tiles.Length);
         foreach (Tile tile in FindObjectsOfType<Tile>())
         {
-            if((Mathf.Abs(transform.position.x - tile.transform.position.x) + 
-                Mathf.Abs(transform.position.y - tile.transform.position.y)) <= tileSpeed)
+            Debug.Log(Mathf.Abs(transform.position.x - tile.transform.position.x));
+            Debug.Log(Mathf.Abs(transform.position.y - tile.transform.position.y));
+            bool isReachable = (Mathf.Abs(transform.position.x - tile.transform.position.x) +
+                Mathf.Abs(transform.position.y - tile.transform.position.y)) <= tileSpeed;
+            Debug.Log(isReachable);
+            if (isReachable)
             {
+                Debug.Log("Checking for tile");
                 if(tile.IsClear() == true)
                 {
                     tile.Highlight();

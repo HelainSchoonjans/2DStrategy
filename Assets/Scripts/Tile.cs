@@ -34,11 +34,6 @@ public class Tile : MonoBehaviour
         transform.localScale -= Vector3.one * hoverAmount;
     }
 
-    public void OnMouseDown()
-    {
-        Debug.Log("Clicking on tile");
-    }
-
     public bool IsClear()
     {
         Collider2D col = Physics2D.OverlapCircle(transform.position, 0.2f, obstacleLayer);

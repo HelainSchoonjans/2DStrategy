@@ -108,7 +108,7 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 256
-  highlightedColor: {r: 0.19063722, g: 0.28132284, b: 0.7924528, a: 0}
+  highlightedColor: {r: 0.19063722, g: 0.28132284, b: 0.7924528, a: 0.19607843}
   isWalkable: 0
 --- !u!61 &61875334241733046
 BoxCollider2D:

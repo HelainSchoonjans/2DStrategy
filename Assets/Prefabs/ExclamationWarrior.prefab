@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
-  tileSpeed: 3
+  tileSpeed: 9
   hasMoved: 0
   hoverAmount: 0.1
 --- !u!61 &61050105358091134
