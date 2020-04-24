@@ -34,6 +34,15 @@ public class Tile : MonoBehaviour
         transform.localScale -= Vector3.one * hoverAmount;
     }
 
+    public void OnMouseDown()
+    {
+        if(isWalkable && gameMaster.selectedUnit != null)
+        {
+            Debug.Log("Moving to tile");
+            gameMaster.selectedUnit.Move(this.transform.position);
+        }
+    }
+
     public bool IsClear()
     {
         Collider2D col = Physics2D.OverlapCircle(transform.position, 0.2f, obstacleLayer);

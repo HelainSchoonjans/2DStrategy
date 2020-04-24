@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour
     GameMaster gameMaster;
 
     public int tileSpeed;
+    public float moveSpeed;
     public bool hasMoved;
     public float hoverAmount;
 
@@ -24,6 +25,26 @@ public class Unit : MonoBehaviour
     private void OnMouseExit()
     {
         transform.localScale -= Vector3.one * hoverAmount;
+    }
+
+    public void Move(Vector2 position)
+    {
+        StartCoroutine(StartMovement(position));
+    }
+
+    IEnumerator StartMovement(Vector2 position)
+    {
+        while(transform.position.x != position.x)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(position.x, transform.position.y), moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+        while (transform.position.y != position.y)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, position.x), moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+        hasMoved = true;
     }
 
     public void OnMouseDown()
@@ -46,14 +67,12 @@ public class Unit : MonoBehaviour
 
     void GetWalkableTiles()
     {
-        Debug.Log("Getting walkable tiles");
         if (hasMoved == true)
         {
             return;
         }
 
         Tile[] tiles = FindObjectsOfType<Tile>();
-        Debug.Log("Number of tiles:");
         Debug.Log(tiles.Length);
         foreach (Tile tile in FindObjectsOfType<Tile>())
         {
@@ -64,7 +83,6 @@ public class Unit : MonoBehaviour
             Debug.Log(isReachable);
             if (isReachable)
             {
-                Debug.Log("Checking for tile");
                 if(tile.IsClear() == true)
                 {
                     tile.Highlight();
