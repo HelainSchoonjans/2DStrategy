@@ -29,6 +29,7 @@ public class Unit : MonoBehaviour
 
     public void Move(Vector2 position)
     {
+        gameMaster.ResetTiles();
         StartCoroutine(StartMovement(position));
     }
 
@@ -53,6 +54,7 @@ public class Unit : MonoBehaviour
         {
             isSelected = false;
             gameMaster.selectedUnit = null;
+            gameMaster.ResetTiles();
         } else
         {
             if(gameMaster.selectedUnit != null)
@@ -61,6 +63,7 @@ public class Unit : MonoBehaviour
             }
             isSelected = true;
             gameMaster.selectedUnit = this;
+            gameMaster.ResetTiles();
             GetWalkableTiles();
         }
     }
