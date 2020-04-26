@@ -48,45 +48,51 @@ public class Unit : MonoBehaviour
         hasMoved = true;
     }
 
-    public void OnMouseDown()
+    public void Unselect()
     {
-        if( isSelected == true )
+        if (isSelected)
         {
             isSelected = false;
             gameMaster.selectedUnit = null;
             gameMaster.ResetTiles();
+        }
+    }
+
+    public void Select()
+    {
+        gameMaster.selectedUnit?.Unselect();
+        isSelected = true;
+        gameMaster.selectedUnit = this;
+        GetWalkableTiles();
+    }
+
+    public void OnMouseDown()
+    {
+        if( isSelected == true )
+        {
+            // TODO possible to get rid of the if else and remove some code
+            Unselect();
         } else
         {
-            if(gameMaster.selectedUnit != null)
-            {
-                gameMaster.selectedUnit.isSelected = false;
-            }
-            isSelected = true;
-            gameMaster.selectedUnit = this;
-            gameMaster.ResetTiles();
-            GetWalkableTiles();
+            Select();
         }
     }
 
     void GetWalkableTiles()
     {
-        if (hasMoved == true)
+        if (hasMoved)
         {
             return;
         }
 
         Tile[] tiles = FindObjectsOfType<Tile>();
-        Debug.Log(tiles.Length);
         foreach (Tile tile in FindObjectsOfType<Tile>())
         {
-            Debug.Log(Mathf.Abs(transform.position.x - tile.transform.position.x));
-            Debug.Log(Mathf.Abs(transform.position.y - tile.transform.position.y));
             bool isReachable = (Mathf.Abs(transform.position.x - tile.transform.position.x) +
                 Mathf.Abs(transform.position.y - tile.transform.position.y)) <= tileSpeed;
-            Debug.Log(isReachable);
             if (isReachable)
             {
-                if(tile.IsClear() == true)
+                if(tile.IsClear())
                 {
                     tile.Highlight();
                 }

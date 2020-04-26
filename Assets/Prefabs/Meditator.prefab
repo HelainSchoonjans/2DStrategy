@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4973263032979591238}
   - component: {fileID: 4973263032979591239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4973263033509878634}
   - component: {fileID: 4973263033509878635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 4973263034974945262}
   - component: {fileID: 4973263034974945263}
   - component: {fileID: 7059455578240530473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Meditator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &4973263034974945263
 Animator:

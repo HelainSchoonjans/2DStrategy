@@ -38,7 +38,6 @@ public class Tile : MonoBehaviour
     {
         if(isWalkable && gameMaster.selectedUnit != null)
         {
-            Debug.Log("Moving to tile");
             gameMaster.selectedUnit.Move(this.transform.position);
         }
     }
@@ -46,13 +45,7 @@ public class Tile : MonoBehaviour
     public bool IsClear()
     {
         Collider2D col = Physics2D.OverlapCircle(transform.position, 0.2f, obstacleLayer);
-        if(col != null)
-        {
-            return false;
-        } else
-        {
-            return true;
-        }
+        return col == null;
     }
 
     public void Highlight()
