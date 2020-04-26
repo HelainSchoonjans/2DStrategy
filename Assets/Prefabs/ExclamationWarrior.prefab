@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 2623611733571340779}
   - component: {fileID: 61050105358091134}
   - component: {fileID: 2623611733571340778}
+  - component: {fileID: 114210915510006310}
   - component: {fileID: 114913452135253396}
   m_Layer: 8
   m_Name: ExclamationWarrior
@@ -242,6 +243,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114210915510006310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2623611733571340772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a320acf2119ab408bb9d24379e06dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAmount: 0.1
 --- !u!114 &114913452135253396
 MonoBehaviour:
   m_ObjectHideFlags: 0

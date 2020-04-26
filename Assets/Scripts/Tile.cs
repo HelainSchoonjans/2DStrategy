@@ -7,8 +7,6 @@ public class Tile : MonoBehaviour
     private SpriteRenderer rend;
     public Sprite[] tileGraphics;
 
-    public float hoverAmount;
-
     public LayerMask obstacleLayer;
 
     public Color highlightedColor;
@@ -22,16 +20,6 @@ public class Tile : MonoBehaviour
         rend.sprite = tileGraphics[randomTile];
 
         gameMaster = FindObjectOfType<GameMaster>();
-    }
-
-    private void OnMouseEnter()
-    {
-        transform.localScale += Vector3.one * hoverAmount;
-    }
-
-    private void OnMouseExit()
-    {
-        transform.localScale -= Vector3.one * hoverAmount;
     }
 
     public void OnMouseDown()

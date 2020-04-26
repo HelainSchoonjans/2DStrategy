@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 4973263034974945261}
   - component: {fileID: 4973263034974945262}
   - component: {fileID: 4973263034974945263}
+  - component: {fileID: 114271727412277526}
   - component: {fileID: 7059455578240530473}
   m_Layer: 8
   m_Name: Meditator
@@ -238,6 +239,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114271727412277526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4973263034974945260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a320acf2119ab408bb9d24379e06dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverAmount: 0.1
 --- !u!114 &7059455578240530473
 MonoBehaviour:
   m_ObjectHideFlags: 0
