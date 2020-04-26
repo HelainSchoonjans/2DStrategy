@@ -9,8 +9,9 @@ A game based on this [Udemy course](https://www.udemy.com/course/the-ultimate-gu
 - after having moved, the character can't be selected again. Moving indeed sets z to 0 instead of -1. Either I should use other methods to decide which objects are above the others, or I shoulf ensure z keeps it's value.
 - movement bugs; character can go too far.
 - finish the meditator character
-- meditators don't seem to move to the center of the tile.
 - when a character moves, he should avoid obstacles.
+- the animation of the meditator is now too low
+ 	- I endede up recreating his animation.
 
 ## Troubleshooting
 - by adding a box collider I could make my clicks on the characters detected. I also had to center the box collider on the characters; there was an offset.
