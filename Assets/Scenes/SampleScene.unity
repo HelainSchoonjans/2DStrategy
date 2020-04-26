@@ -1811,6 +1811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedUnit: {fileID: 0}
+  playerTurn: 1
 --- !u!4 &1066530219
 Transform:
   m_ObjectHideFlags: 0
