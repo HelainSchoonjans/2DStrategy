@@ -259,6 +259,7 @@ MonoBehaviour:
   moveSpeed: 1
   hasMoved: 0
   hoverAmount: 0.1
+  playerNumber: 1
 --- !u!1 &2623611734362326222
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Unit : MonoBehaviour
     public float moveSpeed;
     public bool hasMoved;
     public float hoverAmount;
+    public int playerNumber;
 
     private void Start()
     {
@@ -42,7 +43,7 @@ public class Unit : MonoBehaviour
         }
         while (transform.position.y != position.y)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, position.x), moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, position.y), moveSpeed * Time.deltaTime);
             yield return null;
         }
         hasMoved = true;
@@ -60,10 +61,13 @@ public class Unit : MonoBehaviour
 
     public void Select()
     {
-        gameMaster.selectedUnit?.Unselect();
-        isSelected = true;
-        gameMaster.selectedUnit = this;
-        GetWalkableTiles();
+        if(playerNumber == gameMaster.playerTurn)
+        {
+            gameMaster.selectedUnit?.Unselect();
+            isSelected = true;
+            gameMaster.selectedUnit = this;
+            GetWalkableTiles();
+        }
     }
 
     public void OnMouseDown()
