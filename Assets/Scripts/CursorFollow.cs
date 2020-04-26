@@ -5,8 +5,13 @@ using UnityEngine;
 public class CursorFollow : MonoBehaviour
 {
 
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = cursorPosition;
