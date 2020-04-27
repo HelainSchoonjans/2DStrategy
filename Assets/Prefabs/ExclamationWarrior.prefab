@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a320acf2119ab408bb9d24379e06dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverAmount: 0.1
+  hoverAmount: 0.2
 --- !u!114 &114913452135253396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,6 @@ MonoBehaviour:
   tileSpeed: 9
   moveSpeed: 1
   hasMoved: 0
-  hoverAmount: 0.1
   playerNumber: 1
 --- !u!1 &2623611734362326222
 GameObject:
