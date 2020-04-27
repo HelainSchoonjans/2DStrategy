@@ -36,6 +36,7 @@ public class Unit : MonoBehaviour
             yield return null;
         }
         hasMoved = true;
+        Unselect();
     }
 
     public void Unselect()

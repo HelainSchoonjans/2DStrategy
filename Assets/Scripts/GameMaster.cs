@@ -7,6 +7,7 @@ public class GameMaster : MonoBehaviour
     public Unit selectedUnit;
 
     public int playerTurn = 1;
+    public GameObject selectedUnitSquare;
 
     public void ResetTiles()
     {
@@ -21,6 +22,15 @@ public class GameMaster : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             EndTurn();
+        }
+
+        if(selectedUnit != null)
+        {
+            selectedUnitSquare.SetActive(true);
+            selectedUnitSquare.transform.position = selectedUnit.transform.position;
+        } else
+        {
+            selectedUnitSquare.SetActive(false);
         }
     }
 
