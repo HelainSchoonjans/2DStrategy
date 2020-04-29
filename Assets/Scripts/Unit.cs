@@ -12,9 +12,16 @@ public class Unit : MonoBehaviour
     public bool hasMoved;
     public int playerNumber;
 
+    public int attackRange;
+    public List<Unit> ennemiesInRange = new List<Unit>();
+    public bool hasAttacked;
+
+    public GameObject weaponIcon;
+
     private void Start()
     {
         gameMaster = FindObjectOfType<GameMaster>();
+        weaponIcon.SetActive(false);
     }
 
     public void Move(Vector2 position)
@@ -25,6 +32,7 @@ public class Unit : MonoBehaviour
 
     IEnumerator StartMovement(Vector2 position)
     {
+        ResetWeaponIcons();
         while(transform.position.x != position.x)
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(position.x, transform.position.y), moveSpeed * Time.deltaTime);
@@ -36,7 +44,8 @@ public class Unit : MonoBehaviour
             yield return null;
         }
         hasMoved = true;
-        Unselect();
+        ResetWeaponIcons();
+        GetEnnemies();
     }
 
     public void Unselect()
@@ -49,6 +58,15 @@ public class Unit : MonoBehaviour
         }
     }
 
+    public void ResetWeaponIcons()
+    {
+        foreach (Unit ennemy in FindObjectsOfType<Unit>())
+        {
+            ennemy.weaponIcon.SetActive(false);
+        }
+        ennemiesInRange.Clear();
+    }
+
     public void Select()
     {
         if(playerNumber == gameMaster.playerTurn)
@@ -56,6 +74,7 @@ public class Unit : MonoBehaviour
             gameMaster.selectedUnit?.Unselect();
             isSelected = true;
             gameMaster.selectedUnit = this;
+            GetEnnemies();
             GetWalkableTiles();
         }
     }
@@ -89,6 +108,24 @@ public class Unit : MonoBehaviour
                 if(tile.IsClear())
                 {
                     tile.Highlight();
+                }
+            }
+        }
+    }
+
+    void GetEnnemies()
+    {
+        ennemiesInRange.Clear();
+        foreach(Unit unit in FindObjectsOfType<Unit>())
+        {
+            bool isReachable = (Mathf.Abs(transform.position.x - unit.transform.position.x) +
+                Mathf.Abs(transform.position.y - unit.transform.position.y)) <= attackRange;
+            if (isReachable)
+            {
+                if(gameMaster.playerTurn != unit.playerNumber && !hasAttacked)
+                {
+                    ennemiesInRange.Add(unit);
+                    unit.weaponIcon.SetActive(true);
                 }
             }
         }
