@@ -353,3 +353,7 @@ MonoBehaviour:
   ennemiesInRange: []
   hasAttacked: 0
   weaponIcon: {fileID: 238080933}
+  health: 5
+  attackDamage: 3
+  counterAttackDamage: 2
+  armor: 1
