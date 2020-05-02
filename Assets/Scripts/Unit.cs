@@ -25,10 +25,13 @@ public class Unit : MonoBehaviour
 
     public DamageIcon damageIcon;
 
+    private Animator cameraShakeAnimation;
+
     private void Start()
     {
         gameMaster = FindObjectOfType<GameMaster>();
         weaponIcon.SetActive(false);
+        cameraShakeAnimation = Camera.main.GetComponent<Animator>();
     }
 
     public void Move(Vector2 position)
@@ -110,6 +113,7 @@ public class Unit : MonoBehaviour
 
     void Attack(Unit enemy)
     {
+        cameraShakeAnimation.SetTrigger("shake");
         hasAttacked = true;
 
         int enemyDamage = attackDamage - enemy.armor;
