@@ -7,6 +7,8 @@ public class DamageIcon : MonoBehaviour
     public Sprite[] sprites;
     public float lifetime;
 
+    public GameObject effect;
+
     private void Start()
     {
         Invoke("Destruction", lifetime);
@@ -19,6 +21,7 @@ public class DamageIcon : MonoBehaviour
 
     void Destruction()
     {
+        Instantiate(effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
