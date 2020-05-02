@@ -361,6 +361,8 @@ MonoBehaviour:
   attackDamage: 3
   counterAttackDamage: 2
   armor: 1
+  damageIcon: {fileID: 3745927050320265208, guid: 1597b9eaa7854f74985384fd6b2bf58b,
+    type: 3}
 --- !u!1 &2623611734362326222
 GameObject:
   m_ObjectHideFlags: 0
