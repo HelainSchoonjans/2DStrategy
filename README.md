@@ -10,6 +10,8 @@ A game based on this [Udemy course](https://www.udemy.com/course/the-ultimate-gu
 - It would be nice to be able to move the camera and zoom.
 - Attack scripts and weapon icons not always working as expected. Blue attacking grey does not show damage icons.
 - Didn't create a death animation or change the background color to red on camera shake.
+- Did not add a shadow to game objects.
+- Add lighting effet to make the scene less boring.
 
 ## Troubleshooting
 - by adding a box collider I could make my clicks on the characters detected. I also had to center the box collider on the characters; there was an offset.

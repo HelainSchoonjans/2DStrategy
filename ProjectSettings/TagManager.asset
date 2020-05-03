@@ -47,6 +47,9 @@ TagManager:
   - name: Units
     uniqueID: 2388418989
     locked: 0
+  - name: Effect
+    uniqueID: 822692661
+    locked: 0
   - name: Icon
     uniqueID: 2589415057
     locked: 0
