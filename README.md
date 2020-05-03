@@ -12,6 +12,19 @@ A game based on this [Udemy course](https://www.udemy.com/course/the-ultimate-gu
 - Didn't create a death animation or change the background color to red on camera shake.
 - Did not add a shadow to game objects.
 - Add lighting effet to make the scene less boring.
+- Add the moving background shapes.
+- Add clouds
+- Adding flag UI in the corners of the screen
+- Adding gold and health icons
+- Add UI button for buying units 
+- Add archers
+- Add sound effects and background music
+- Victory conditions
+- restart button
+- inventory/backstory
+- additional characteres
+- 
+
 
 ## Troubleshooting
 - by adding a box collider I could make my clicks on the characters detected. I also had to center the box collider on the characters; there was an offset.
